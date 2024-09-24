@@ -50,3 +50,35 @@ JMX_PORT="7200"
 cd node2
 ./bin/cassandra -f
 ```
+
+verfiy the second node is running
+
+```bash
+./bin/nodetool status
+```
+
+start the third node
+
+cassandra.yaml
+
+```yaml
+storage_port: 7004
+ssl_storage_port: 7005
+native_transport_port: 9044
+```
+
+cassandra-env.sh
+
+in line 224
+JMX_PORT="7201"
+
+```bash
+cd node3
+./bin/cassandra -f
+```
+
+verfiy the third node is running
+
+```bash
+./bin/nodetool status
+```
