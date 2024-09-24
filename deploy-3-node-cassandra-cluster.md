@@ -82,3 +82,23 @@ verfiy the third node is running
 ```bash
 ./bin/nodetool status
 ```
+
+cqsh
+
+```bash
+./bin/cqlsh
+```
+
+create a keyspace
+
+```cql
+desc keyspaces;
+CREATE KEYSPACE mykeyspace WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+use mykeyspace;
+desc tables;
+CREATE TABLE mytable (id int PRIMARY KEY, name text);
+desc tables;
+INSERT INTO mytable (id, name) VALUES (1, 'John');
+INSERT INTO mytable (id, name) VALUES (2, 'Doe');
+SELECT * FROM mytable;
+```
