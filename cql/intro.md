@@ -32,13 +32,3 @@ SELECT * FROM users;
 ```cql
 SELECT token(user_id), user_id, user_name, user_bcity FROM users;
 ```
-
-load csv
-
-```cql
-COPY hotel.available_rooms_by_hotel_date (hotel_id, date, room_number, is_available) FROM '/Users/nag/play-with-sql-nosql/available_rooms.csv' WITH HEADER = TRUE;
-```
-
-```cql
-SELECT * FROM hotel.available_rooms_by_hotel_date;
-```
