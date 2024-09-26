@@ -33,7 +33,7 @@ SELECT * FROM available_rooms_by_hotel_date WHERE date='2016-01-05';
 SELECT * FROM available_rooms_by_hotel_date WHERE date='2016-01-05' ALLOW FILTERING;
 
 # Search for hotel rooms for a specific hotel and date range:
-SELECT * FROM available_rooms_by_hotel_date WHERE hotel_id='AZ123' and date>'2016-01-05' and date<'2016-01-12';
+SELECT * FROM available_rooms_by_hotel_date WHERE hotel_id='AZ123' and date='2016-01-05' and room_number=101;
 
 # Why doesn't this query work?
 SELECT * FROM available_rooms_by_hotel_date WHERE hotel_id='AZ123' and room_number=101;
