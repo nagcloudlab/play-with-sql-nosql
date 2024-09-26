@@ -135,8 +135,8 @@ public class UserServiceApplication implements CommandLineRunner {
         // users.forEach(user -> System.out.println(user));
 
         // // 3. Find User by ID
-        // User foundUser = userRepository.findById(newUser.getId()).orElse(null);
-        // System.out.println("Found User: " + foundUser);
+        User foundUser = userRepository.findById(newUser.getId()).orElse(null);
+        System.out.println("Found User: " + foundUser);
 
         // // 4. Update User
         // foundUser.setEmail("nag@updated.com");
